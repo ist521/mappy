@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+  background-color: #e8e8d8;
+}
+
+h1 {
+  text-align: center;
+  background-color: pink;
+  padding: 8px;
+  font-size: 50px;
+}
+
+h3 {
+  margin-top: 20px;
+  background-image: linear-gradient(#fcf0fc, #fcb0c2 25%, #fd1392 90%);
+  font-size: 22px;
+  border: 5px groove #a6ebf5;
+  border-radius: 30px;
+  padding: 3px 30px;
+  cursor: pointer;
+  transition: transform 0.1s;  
+}
+
+.container {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#signin {
+  flex: 1;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappy</title>
+    <link href="static/generatedwordcloud/generated.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      #status {
+        position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+        background: #fff; border: 1px solid #ccc; border-radius: 8px;
+        padding: 8px 14px; font-family: sans-serif; z-index: 20;
+      }
+      #status[hidden] { display: none; }
+      #back { position: fixed; top: 16px; left: 16px; font-family: sans-serif; z-index: 20; }
+
+      #menu {
+        position: absolute; display: flex; flex-direction: column; gap: 6px;
+        background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: sans-serif; z-index: 10;
+      }
+      #menu[hidden] { display: none; }
+      #menu-title { font-weight: bold; margin-bottom: 4px; }
+      #add-form { display: flex; gap: 4px; }
+    </style>
+  </head>
+  <body>
+    <a id="back" href="homepage.html">&larr; new word</a>
+    <div id="status" hidden></div>
+
+    <svg id="wordcloud"></svg>
+
+    <div id="menu" hidden>
+      <div id="menu-title"></div>
+      <button id="recenter-btn">new map</button>
+      <button id="delete-btn">delete word</button>
+      <button id="release-btn">move word</button>
+      <form id="add-form">
+        <input id="add-input" placeholder="add connected word" autocomplete="off" required>
+        <button type="submit">add</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script type="module" src="static/generatedwordcloud/map.js"></script>
+  </body>
+</html>
