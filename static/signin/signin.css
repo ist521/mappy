@@ -1,0 +1,62 @@
+body { 
+  margin: 0; 
+  padding: 16px; 
+  font-family: verdana; 
+  background: #FFF4DE; 
+}
+
+#back-link { font-size: 18px; }
+
+#signin-card {
+  max-width: 400px; 
+  margin: 40px auto; 
+  background: #fff; 
+  border-radius: 12px;
+  padding: 24px; 
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12); 
+  font-size: 18px;
+}
+
+#signin-card h1 { margin-top: 0; }
+#signin-form label { 
+  display: block; 
+  margin-bottom: 12px; 
+}
+#signin-form input[type="text"], #signin-form input[type="email"], #signin-form input[type="password"] {
+  display: block; 
+  width: 100%; 
+  box-sizing: border-box; 
+  font-size: 18px; 
+  padding: 10px; 
+  margin-top: 4px;
+}
+[hidden] { display: none !important; }
+.show-password { font-size: 16px; }
+#google-btn, #submit-btn { 
+  width: 100%; 
+  font-size: 18px; 
+  padding: 12px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+}
+.or { 
+  text-align: center; 
+  color: #666; 
+}
+.link-btn { 
+  background: none; 
+  border: none; 
+  color: #492376; 
+  text-decoration: underline; 
+  font-size: 16px; 
+  cursor: pointer; 
+  padding: 0; 
+  margin-top: 12px; 
+}
+#message.error { color: #b00020; }
+#message.info { color: #1a6b2a; }
+
+#switch-text {
+  display: block; 
+  margin-bottom: 8px;
+}

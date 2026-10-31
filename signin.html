@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappy - Sign In</title>
+    <link href="static/signin/signin.css" rel="stylesheet" type="text/css" media="all">
+    <link type="image/png" rel="icon" href="map_small.png">
+  </head>
+  <body>
+    <a id="back-link" href="index.html">&larr; back</a>
+
+    <div id="signin-card">
+      <h1 id="signin-title">Sign in</h1>
+
+      <button id="google-btn" type="button">Sign in with Google</button>
+      <p class="or">or</p>
+
+      <form id="signin-form">
+        <label id="name-row" hidden>
+          Your name
+          <input id="name" type="text" autocomplete="name">
+        </label>
+        <label>
+          Email
+          <input id="email" type="email" autocomplete="email" required>
+        </label>
+        <label>
+          Password
+          <input id="password" type="password" autocomplete="current-password" required>
+        </label>
+        <label class="show-password">
+          <input id="show-password" type="checkbox"> show password
+        </label>
+        <p id="message" role="alert" hidden></p>
+        <button id="submit-btn" type="submit">Sign in</button>
+      </form>
+
+      <button id="forgot-btn" type="button" class="link-btn">Forgot password?</button>
+      <p id="switch-row">
+        <span id="switch-text">New to Mappy?</span>
+        <a id="switch-link" href="signin.html?mode=create">Create an account</a>
+      </p>
+      <p><a href="homepage.html">Continue without an account</a></p>
+    </div>
+
+    <script type="module" src="static/signin/signin.js"></script>
+  </body>
+</html>

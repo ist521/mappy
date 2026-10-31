@@ -1,0 +1,12 @@
+body { margin: 0; padding: 16px; font-family: sans-serif; background: #e7e7da; }
+#home-link { font-size: 18px; }
+h1 { margin: 16px 0; }
+#library-empty { font-size: 18px; }
+#library-empty[hidden] { display: none; }   /* needed */
+#library-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.map-card { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 8px; }
+.map-card a { text-decoration: none; color: inherit; }
+.map-card img { width: 100%; border-radius: 4px; display: block; }
+.map-word { font-weight: bold; font-size: 20px; margin-top: 6px; }
+.map-date { color: #666; font-size: 14px; }
+.map-delete { margin-top: 6px; font-size: 14px; cursor: pointer; }

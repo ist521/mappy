@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Mappy - Your New Concept Mapping Tool</title>
     <link href="static/index/_index.css" rel="stylesheet" type="text/css" media="all">
+    <link type="image/png" rel="icon" href="map_small.png">
     <style>
       a.signin-link { text-decoration: none; color: inherit; }
     </style>
   </head>
   <body>
-    <h1>WELCOME TO MAPPY</h1>
+    <h1><img src="map_small.png" width="50" height="50"><span class="text">Mappy</span></h1>
+    <h2>Welcome to <span class="text">Mappy</span>!</h2>
+    <br>
+    <div class="intro">
+      <h4><span class="text">Mappy</span> is a web-based concept mapping tool. <span class="text">Mappy</span> will generate word clouds based on your input, including written text, pictures, and speech. You can personalize your map to be more helpful for you by adding new words, deleting existing ones, and organizing them in a way that makes sense to you. <span class="text">Mappy</span> will also help you visualize relationships between words and provide definitions, pictures, and a pronunciation guide if needed. Sign in below or create an account to get started :)</h4>
+      <img class="intro-img" src="example_map.png" alt="">
+    </div>
     <div class="container">
-      <a class="signin-link" href="homepage.html"><h3 class="signin">user sign in</h3></a>
-      <a class="signin-link" href="homepage.html"><h3 class="signin">delegate sign in</h3></a>
-      <a class="signin-link" href="homepage.html"><h3 class="signin">create an account</h3></a>
+      <a class="signin-link" id="user" href="signin.html"><h3 class="signin">user sign in</h3></a>
+      <a class="signin-link" id="delegate" href="signin.html"><h3 class="signin">delegate sign in</h3></a>
+      <a class="signin-link" id="create" href="signin.html?mode=create"><h3 class="signin">create an account</h3></a>
     </div>
   </body>
 </html>

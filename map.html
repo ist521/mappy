@@ -3,30 +3,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mappy</title>
-    <link href="static/generatedwordcloud/generated.css" rel="stylesheet" type="text/css" media="all">
+    <title>Mappy - Map</title>
+    <link href="static/generatedwordcloud/map.css" rel="stylesheet" type="text/css" media="all">
+    <link type="image/png" rel="icon" href="map_small.png">
     <style>
       #status {
         position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
         background: #fff; border: 1px solid #ccc; border-radius: 8px;
-        padding: 8px 14px; font-family: sans-serif; z-index: 20;
+        padding: 8px 14px; font-family: Verdana; z-index: 20;
       }
       #status[hidden] { display: none; }
-      #back { position: fixed; top: 16px; left: 16px; font-family: sans-serif; z-index: 20; }
+      #back { position: fixed; top: 16px; left: 16px; font-family: Verdana; z-index: 20; }
 
       #menu {
         position: absolute; display: flex; flex-direction: column; gap: 6px;
-        background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: sans-serif; z-index: 10;
+        background: #8dc5e4; border: 1px solid #ccc; border-radius: 8px; padding: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: Verdana; z-index: 10;
       }
       #menu[hidden] { display: none; }
       #menu-title { font-weight: bold; margin-bottom: 4px; }
       #add-form { display: flex; gap: 4px; }
+
+      #suggest {
+        position: fixed; top: 60px; left: 50%; transform: translateX(-50%);
+        display: flex; flex-wrap: wrap; align-items: center; gap: 8px; max-width: 90vw;
+        background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 12px 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-family: Verdana; font-size: 20px; z-index: 30;
+      }
+      #suggest[hidden] { display: none; }
+      #suggest p { margin: 0 8px 0 0; }
+      #suggest button { font-size: 20px; padding: 6px 12px; cursor: pointer; }
+      #suggest button.close { background: none; border: none; color: #666; }
+
+      #more-less {
+        position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+        display: flex; gap: 12px; z-index: 20;
+      }
+      #more-less button { font-size: 18px; padding: 8px 16px; cursor: pointer; background: white; border: 2px groove #e6308a; border-radius: 8px;}
     </style>
   </head>
   <body>
     <a id="back" href="homepage.html">&larr; new word</a>
+    <div id="save-share">
+      <button id="save-btn">save map</button>
+      <button id="share-btn">share map</button>
+    </div>
+    <div id="toast" hidden></div>
+    <button id="prev-btn" hidden>&larr; previous map</button>
+
+    <div id="confirm-box" hidden>
+      <div id="confirm-card">
+        <p id="confirm-text"></p>
+        <div id="confirm-buttons">
+          <button id="confirm-save">save to Mappy library, then go</button>
+          <button id="confirm-go">continue without saving</button>
+          <button id="confirm-cancel">stay here</button>
+        </div>
+      </div>
+    </div>
+    <div id="more-less">
+      <button id="less-btn">&larr; see less</button>
+      <button id="more-btn">see more &rarr;</button>
+    </div>
     <div id="status" hidden></div>
+    <div id="suggest" hidden></div>
 
     <svg id="wordcloud"></svg>
 
@@ -43,5 +83,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script type="module" src="static/generatedwordcloud/map.js"></script>
+    <p>Pictograms: Sergio Palao, ARASAAC (arasaac.org), Government of Aragon, CC BY-NC-SA. Photos: Wikimedia Commons.</p>
   </body>
 </html>
